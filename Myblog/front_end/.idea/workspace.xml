@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1313db03-5e52-4c4e-8712-87325cdb8f42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pigblog-vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/pigblog-vue/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pigblog-vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/pigblog-vue/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pigblog-vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pigblog-vue/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pigblog-vue/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pigblog-vue/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/pigblog-vue/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pigblog-vue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pigblog-vue/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pigblog-vue/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pigblog-vue/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pigblog-vue/src/views/About.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pigblog-vue/src/views/Home.vue" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/pigblog-vue" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Apache\Maven-repository" />
+        <option name="mavenHome" value="D:/Apache/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Apache\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1iB67Ua2Zzs3GLCgITNXfOMbGvL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="D:\IntelliJ IDEA 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1313db03-5e52-4c4e-8712-87325cdb8f42" name="Default Changelist" comment="" />
+      <created>1601368470084</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601368470084</updated>
+      <workItem from="1601368472959" duration="15293000" />
+      <workItem from="1601390061883" duration="259000" />
+      <workItem from="1601426838192" duration="1378000" />
+      <workItem from="1601454368661" duration="19990000" />
+      <workItem from="1601540822544" duration="2355000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/pigblog-vue" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1601476659230">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601476659230" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1601477174560">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601477174560" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1601477174558">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601477174558" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1601477174557">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601477174557" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1601477174560">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601477174560" />
+    <state x="270" y="55" key="SettingsEditor" timestamp="1601368535030">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601368535030" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1601454590665">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601454590665" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601456311367">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601456311367" />
+  </component>
+</project>

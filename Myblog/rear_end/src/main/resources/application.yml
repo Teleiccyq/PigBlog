@@ -1,0 +1,31 @@
+# DataSource Config
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: q799774821
+    hikari:
+      max-lifetime: 5120
+      idle-timeout: 1000
+    tomcat:
+      max-wait: 1000
+      max-idle: 10
+      max-active: 100
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+#shiro-redis:
+#  enable:true
+#  redis-manager:
+#    host:
+markerhub:
+  jwt:
+    # 加密秘钥
+    secret: f4e2e52034348f86b67cde581c0f9eb5
+    # token有效时长，7天，单位秒
+    expire: 604800
+    header: Authorization
+server:
+  port: 8080
