@@ -24,8 +24,8 @@ module.exports = {
         disableHostCheck: true,
 
         proxy: null,
-    }
+    },
 
-
+    productionSourceMap:false,
 
 };

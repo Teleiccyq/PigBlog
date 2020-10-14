@@ -17,11 +17,14 @@
                         <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
                         <el-button @click="resetForm('ruleForm')">重置</el-button>
                     </el-form-item>
+                    <el-form-item>
+                        <el-link href="/regist" type="warning">
+                            没有账号？点击注册吧~
+                        </el-link>
+                    </el-form-item>
                 </el-form>
             </el-main>
         </el-container>
-
-
     </div>
 </template>
 
@@ -117,7 +120,8 @@
         max-width: 40%;
         margin: 0 auto;
     }
-    .mlogin{
+
+    .mlogin {
         margin-top: 100px;
         text-align: center;
     }

@@ -3,7 +3,9 @@
     <div class="m-content">
         <h3>Pig的Blog</h3>
         <div class="block">
-            <el-avatar :size="50" :src="user.avatar"></el-avatar>
+            <el-link href="/">
+                <el-avatar :size="50" :src="user.avatar"></el-avatar>
+            </el-link>
             <div>{{user.username}}</div>
         </div>
         <div class="maction">

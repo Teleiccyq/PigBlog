@@ -27,7 +27,7 @@ public class UserController {
 
     @GetMapping("/login")
     public Result test(){
-        User user = userService.getById(2L);
+        User user = userService.getById(1L);
         return Result.fail("没有该id的用户");
     }
 

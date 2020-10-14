@@ -1,14 +1,8 @@
 <template>
     <div class="backPic">
         <span><el-link class="mblog" type="danger" @click="mblogs">Blog</el-link></span>
-        <div class="block">
-            <el-carousel height="250px" autoplay="true">
-                <el-carousel-item v-for="item in imgurl">
-                    <el-row>
-                        <el-col :span="24"><img ref="imgHeight" :src="item.url" /></el-col>
-                    </el-row>
-                </el-carousel-item>
-            </el-carousel>
+        <div class="mTime">
+            <p>{{gettime}}</p>
         </div>
     </div>
 </template>
@@ -20,35 +14,52 @@
         methods: {
             mblogs() {
                 this.$router.push("/blogs")
-            }
-        },
-        components: {
-            aplayer
+            },
+            getTime() {
+                var _this = this;
+                let yy = new Date().getFullYear();
+                let mm = new Date().getMonth() + 1;
+                let dd = new Date().getDate();
+                let hh = new Date().getHours();
+                let mf = new Date().getMinutes() < 10 ? '0' + new Date().getMinutes() : new Date().getMinutes();
+                let ss = new Date().getSeconds() < 10 ? '0' + new Date().getSeconds() : new Date().getSeconds();
+                // _this.gettime = yy+'-'+mm+'-'+dd+' '+hh+':'+mf+':'+ss;
+                _this.gettime = hh + ':' + mf + ':' + ss;
+            },
+            currentTime() {
+                setInterval(this.getTime, 500)
+            },
         },
         data() {
             return {
-                imgurl: [
-                    {
-                        id:1,url:"http://cxycyq.gitee.io/my-blgo/images/item/item1.jpg"
-                    },
-                    {
-                        id:2,url:"http://cxycyq.gitee.io/my-blgo/images/item/item2.jpg"
-                    },
-                    {
-                        id:3,url:"http://cxycyq.gitee.io/my-blgo/images/item/item3.jpg"
-                    },
-                ]
+                gettime: '',//当前时间
             }
-        }
+        },
+        created() {
+            this.currentTime();
+        },
     }
 </script>
 
 
 <style scoped>
-    .block {
-        max-width: 400px;
-        margin-top: 90px;
-        margin-left: 130px;
+    .mTime {
+        text-align: center;
+        width: 220px;
+        height: 60px;
+        border-radius: 50px;
+        /*background-color: #fbc4c4;*/
+        margin-left: 120px;
+        margin-top: 140px;
+    }
+
+    .mTime p {
+        font-size: 50px;
+        color: #e838ff;
+        font-style: italic;
+        font-weight: bold;
+        opacity: 0.6;
+        font-family: 微软雅黑, 宋体;
     }
 
     .el-carousel__item h3 {
@@ -58,6 +69,7 @@
         line-height: 150px;
         margin: 0;
     }
+
     .el-header, .el-footer {
         color: #333;
         line-height: 60px;
@@ -107,6 +119,6 @@
     .mblog {
         margin-left: 100px;
         margin-top: 20px;
-        font-size: 20px;
+        font-size: 30px;
     }
 </style>
