@@ -40,7 +40,17 @@ public class CorsConfig implements WebMvcConfigurer {
 
 ~~~
 
+## 将Spring Boot项目在cmd中启动：
 
+在项目中 Maven --> package
+
+进入项目 目录打开cmd
+
+执行 mvn install 命令(出现BUILD SUCCESS 证明打包成功)
+
+打开target目录
+
+在当前窗口继续输入命令：java -jar target/打包出来的jar全名
 
 
 

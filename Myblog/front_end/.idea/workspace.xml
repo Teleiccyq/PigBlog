@@ -48,7 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Repositorys/repo/jsp-priject/jspwork/jsp10.15" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="D:\IntelliJ IDEA 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -90,6 +90,10 @@
       <workItem from="1602381561740" duration="6072000" />
       <workItem from="1602553735020" duration="890000" />
       <workItem from="1602663798503" duration="7258000" />
+      <workItem from="1602678592311" duration="72000" />
+      <workItem from="1602685946082" duration="480000" />
+      <workItem from="1602686500110" duration="97000" />
+      <workItem from="1602738211439" duration="254000" />
     </task>
     <servers />
   </component>
@@ -102,10 +106,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1602322084315">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1602738464961">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602322084315" />
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602738464961" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1602338067357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
