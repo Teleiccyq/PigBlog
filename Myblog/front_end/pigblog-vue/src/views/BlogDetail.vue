@@ -6,31 +6,33 @@
         </div>
         <div class="mblog">
             <h2>{{ blog.title }}</h2>
-            <el-link icon="el-icon-edit" v-if="ownblog">
-                <router-link :to="{name:'BlogEdit',params:{blogId : blog.id}}">
+            <div class="backIcon">
+                <el-link icon="el-icon-error" href="/blogs" type="success">返回</el-link>
+
+            </div>
+
+            <el-link class="el-icon-edit" type="primary" v-if="ownblog">
+                <router-link :to="{name:'BlogEdit',params:{blogId : blog.id}}" type="primary">
                     编辑
                 </router-link>
             </el-link>
-            <div class="backIcon">
-                <el-link icon="el-icon-error" href="/blogs">返回</el-link>
+            <div>
+                <el-link class="el-icon-delete" type="warning" v-if="ownblog" @click="deleteBlogs">
+                    删除
+                </el-link>
             </div>
             <el-divider></el-divider>
-                <div class="markdown-body " v-html="blog.content"></div>
+            <div class="markdown-body" v-html="blog.content"></div>
         </div>
-
-
     </div>
 </template>
 <script>
     import 'github-markdown-css/github-markdown.css'
-    // import 'github-markdown-css'
     import cephailc from "../components/cephailc";
 
     export default {
         name: "BlogDetail",
-        components: {
-            cephailc
-        },
+        components: {cephailc},
         data() {
             return {
                 gettime: '',//当前时间
@@ -39,7 +41,8 @@
                     title: '',
                     content: ''
                 },
-                ownblog: false
+                ownblog: false,
+                handbook: "",
             }
         },
         created() {
@@ -75,6 +78,18 @@
             currentTime() {
                 setInterval(this.getTime, 500)
             },
+            deleteBlogs() {
+                const blogId = this.$route.params.blogId
+                const _this = this
+
+                this.$alert('删除成功', '警告', {
+                    confirmButtonText: '确定',
+                    callback: action => {
+                        this.$axios.get("blog/delete/" + blogId)
+                        _this.$router.push("/blogs")
+                    }
+                });
+            }
         },
 
     }
@@ -82,7 +97,7 @@
 
 <style scoped>
     .mblog {
-        box-shadow: 0 2px 12px 0 rgba(0,0,0,0);
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0);
         width: 100%;
         height: 700px;
     }
@@ -105,6 +120,8 @@
     .backIcon {
         float: right;
         font-size: 25px;
+        line-height: 30px;
     }
+
 
 </style>

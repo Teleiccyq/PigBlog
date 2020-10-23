@@ -6,7 +6,6 @@ import Blogs from '../views/Blogs.vue'
 import BlogEdit from '../views/BlogEdit.vue'
 import BlogDetail from '../views/BlogDetail.vue'
 import HomePage from "../views/HomePage";
-
 Vue.use(VueRouter)
 
 const routes = [

@@ -10,9 +10,6 @@ import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 import './axios.js' // 请求拦截
 import "./permission"
-import hljs from 'highlight.js' //导入代码高亮文件
-import 'highlight.js/styles/monokai-sublime.css'  //导入代码高亮样式
-
 
 
 
@@ -20,7 +17,7 @@ Vue.use(Element)
 Vue.use(mavonEditor)
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
-
+// Vue.use(VueVirtualScroller)
 
 
 new Vue({
@@ -44,11 +41,5 @@ instance.interceptors.request.use(
     error => Promise.error(error)
 )
 
-//自定义一个代码高亮指令
-Vue.directive('highlight',function (el) {
-    let highlight = el.querySelectorAll('pre code');
-    highlight.forEach((block)=>{
-        hljs.highlightBlock(block)
-    })
-})
+
 

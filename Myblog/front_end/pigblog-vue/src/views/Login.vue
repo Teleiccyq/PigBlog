@@ -14,12 +14,23 @@
                     </el-form-item>
 
                     <el-form-item>
+
+                        <Vcode
+                                :show="isShow"
+                                @success="success"
+                                @close="close"
+                        />
                         <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
                         <el-button @click="resetForm('ruleForm')">重置</el-button>
                     </el-form-item>
                     <el-form-item>
-                        <el-link href="/regist" type="warning">
+                        <el-link href="/regist" type="danger">
                             没有账号？点击注册吧~
+                        </el-link>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-link href="/blogs" type="warning">
+                            暂不登录
                         </el-link>
                     </el-form-item>
                 </el-form>
@@ -30,10 +41,13 @@
 
 
 <script>
+    import Vcode from "vue-puzzle-vcode";
+
     export default {
         name: "Login",
         data() {
             return {
+                isShow: false, // 验证码模态框是否出现
                 ruleForm: {
                     username: '',
                     password: ''
@@ -49,8 +63,12 @@
                 }
             };
         },
+        components: {
+            Vcode
+        },
         methods: {
             submitForm(formName) {
+                this.isShow = true;
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
                         const _this = this
@@ -65,11 +83,10 @@
                             _this.$store.commit("SET_USERINFO", userInfo)
 
                             //获取
-                            console.log(_this.$store.getters.getUser)
-                            //跳转
-                            _this.$router.push("/blogs")
-                        })
+                            console.log("获取"+_this.$store.getters.getUser)
 
+
+                        })
                     } else {
                         console.log('error submit!!');
                         return false;
@@ -78,6 +95,16 @@
             },
             resetForm(formName) {
                 this.$refs[formName].resetFields();
+            },
+            // 用户通过了验证
+            success() {
+                this.isShow = false; // 通过验证后，需要手动隐藏模态框
+                //跳转
+                this.$router.push("/blogs")
+            },
+            // 用户点击遮罩层，应该关闭模态框
+            close() {
+                this.isShow = false;
             }
         }
     }

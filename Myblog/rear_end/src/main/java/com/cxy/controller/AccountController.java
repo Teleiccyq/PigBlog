@@ -17,8 +17,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
-import java.util.Collections;
-import java.util.List;
 
 @RestController
 public class AccountController {
@@ -58,16 +56,12 @@ public class AccountController {
         user.setUsername(registdto.getUsername());
         user.setPassword(SecureUtil.md5(registdto.getPassword()));
         user.setEmail(registdto.getEmail());
-        user.setAvatar(registdto.getAvatar());
-        user.setStatus(registdto.getStatus());
-        user.setCreated(registdto.getCreated());
-
-        if (userService.save(user)) {
+        boolean flag = registGetOne(registdto.getUsername());
+        if (flag == false && userService.save(user)) {
             return Result.success(MapUtil.builder()
                     .put("id", user.getId())
                     .put("username", user.getUsername())
                     .put("email", user.getEmail())
-                    .put("avatar", user.getAvatar())
                     .map()
             );
         } else {
@@ -75,30 +69,48 @@ public class AccountController {
         }
     }
 
-    @CrossOrigin
-    @GetMapping("/findone")
-    public Result findOne(@Validated @RequestBody Logindto loginDto, HttpServletResponse response){
-        User user = userService.getOne(new QueryWrapper<User>().eq("username", loginDto.getUsername()));
-        return Result.success(MapUtil.builder()
-                .put("id", user.getId())
-                .put("username", user.getUsername())
-                .put("email", user.getEmail())
-                .put("avatar", user.getAvatar())
-                .map());
+    //用户注册判断是否存在用户名
+    @GetMapping("/registgetone")
+    public boolean registGetOne(@Validated String username) {
+        User user = userService.getOne(new QueryWrapper<User>().eq("username", username).last("LIMIT 1"));
+        if (user != null) {
+            //已存在该用户名
+            return true;
+        }
+        return false;
     }
 
-    @CrossOrigin
-    @GetMapping("/find")
-    public List<User> find(@Validated @RequestBody Logindto loginDto, HttpServletResponse response){
-        List<User> list = userService.list(new QueryWrapper<User>().eq("username", loginDto.getUsername()));
-        return list;
+    //通过用户名查询
+    @GetMapping("/getone")
+    public Result getOne(@Validated String username, HttpServletResponse response) {
+        User user = userService.getOne(new QueryWrapper<User>().eq("username", username));
+        if (user != null) {
+            return Result.success(MapUtil.builder()
+                    .put("id", user.getId())
+                    .put("username", user.getUsername())
+                    .put("avatar", user.getAvatar())
+                    .put("email", user.getEmail())
+                    .map()
+            );
+        }
+        return Result.fail("未查询到用户名为" + username + "的用户");
+
     }
+
+
+    //通过ID查询
+    @GetMapping("/getbyid")
+    public User getById(@Validated Integer id, HttpServletResponse response) {
+        User byId = userService.getById(id);
+        return byId;
+    }
+
 
     // 退出
     @GetMapping("/logout")
     @RequiresAuthentication
     public Result logout() {
         SecurityUtils.getSubject().logout();
-        return Result.success(null);
+        return Result.success("操作成功");
     }
 }

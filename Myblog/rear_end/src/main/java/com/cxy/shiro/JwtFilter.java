@@ -22,7 +22,6 @@ import java.io.IOException;
 
 /**
  * 需要将jwt封装成jwtToken
- *
  */
 @Component
 public class JwtFilter extends AuthenticatingFilter {
@@ -75,6 +74,7 @@ public class JwtFilter extends AuthenticatingFilter {
 
     /**
      * 处理跨域问题
+     *
      * @param request
      * @param response
      * @return

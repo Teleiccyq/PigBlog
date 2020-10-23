@@ -69,8 +69,6 @@
                             _this.$store.commit("SET_TOKEN", jwt)
                             _this.$store.commit("SET_USERINFO", userInfo)
 
-                            //获取
-                            console.log(_this.$store.getters.getUser)
                             //跳转
                             _this.$router.push("/blogs")
                         })

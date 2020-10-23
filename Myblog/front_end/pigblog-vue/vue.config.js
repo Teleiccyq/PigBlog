@@ -1,21 +1,16 @@
 module.exports = {
 
-    configureWebpack: {
-
-        // other webpack options to merge in ...
-
-    },
 
     // devServer Options don't belong into `configureWebpack`
 
     devServer: {
         open: process.platform === 'darwin',
 
-        host:'0.0.0.0',
+        host: '0.0.0.0',
 
-        port: 8082,
+        port: 8083,
 
-        public: '172.25.173.198:8082',
+        public: '172.25.173.198:8083',
 
         hot: true,
 
@@ -26,8 +21,10 @@ module.exports = {
         disableHostCheck: true,
 
         proxy: null,
+
     },
 
-    productionSourceMap:false,
+    productionSourceMap: false,
+
 
 };

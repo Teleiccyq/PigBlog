@@ -1,11 +1,9 @@
 package com.cxy.common.dto;
 
 import lombok.Data;
-import sun.management.counter.perf.PerfInstrumentation;
 
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
-
 @Data
 public class Registdto {
 
@@ -23,4 +21,5 @@ public class Registdto {
     private Integer status;
 
     private LocalDateTime created;
+
 }

@@ -7,7 +7,6 @@
     </div>
 </template>
 <script>
-    import aplayer from 'vue-aplayer'
 
     export default {
         name: "Index",
