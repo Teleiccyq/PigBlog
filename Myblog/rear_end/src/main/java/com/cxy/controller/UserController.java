@@ -18,7 +18,6 @@ public class UserController {
     UserService userService;
 
 
-    @RequiresAuthentication
     @GetMapping("/index")
     public Result index(){
         User user = userService.getById(1L);

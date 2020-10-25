@@ -25,7 +25,7 @@ public class AccountRealm extends AuthorizingRealm {
     @Autowired
     UserService userService;
 
-
+    //判断token
     @Override
     public boolean supports(AuthenticationToken token) {
         return token instanceof JwtToken;
@@ -44,14 +44,19 @@ public class AccountRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         JwtToken jwt = (JwtToken) token;
         log.info("jwt----------------->{}", jwt);
+        //获取userId
         String userId = jwtUtils.getClaimByToken((String) jwt.getPrincipal()).getSubject();
-        User user = userService.getById(Long.parseLong(userId));
+//        User user = userService.getById(Long.parseLong(userId));
+        //查询用户
+        User user = userService.getById(Long.valueOf(userId));
+        //判断是否可用
         if (user == null) {
             throw new UnknownAccountException("账户不存在！");
         }
         if (user.getStatus() == -1) {
             throw new LockedAccountException("账户已被锁定！");
         }
+        //将用户基本信息返回给Shiro
         AcctountProfile profile = new AcctountProfile();
         BeanUtil.copyProperties(user, profile);
         log.info("profile----------------->{}", profile.toString());

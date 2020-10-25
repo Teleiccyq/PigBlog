@@ -40,31 +40,32 @@ public class JwtFilter extends AuthenticatingFilter {
         return new JwtToken(jwt);
     }
 
+    //判断过期和凭证
     @Override
     protected boolean onAccessDenied(ServletRequest servletRequest, ServletResponse servletResponse) throws Exception {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         String token = request.getHeader("Authorization");
         if (StringUtils.isEmpty(token)) {
-            return true;
+            return true;//没有jwt 交给 controller 中的 @RequiresAuthentication 进行处理
         } else {
-            // 判断是否已过期
+            // 校验jwt 判断是否已过期
             Claims claim = jwtUtils.getClaimByToken(token);
             if (claim == null || jwtUtils.isTokenExpired(claim.getExpiration())) {
                 throw new ExpiredCredentialsException("token已失效，请重新登录！");
             }
         }
-        // 执行自动登录
+        // 执行登录
         return executeLogin(servletRequest, servletResponse);
     }
 
+    //执行登录异常处理 返回JOSN给前端
     @Override
     protected boolean onLoginFailure(AuthenticationToken token, AuthenticationException e, ServletRequest request, ServletResponse response) {
         HttpServletResponse httpResponse = (HttpServletResponse) response;
         try {
-            //处理登录失败的异常
             Throwable throwable = e.getCause() == null ? e : e.getCause();
-            Result r = Result.fail(throwable.getMessage());
-            String json = JSONUtil.toJsonStr(r);
+            Result result = Result.fail(throwable.getMessage());
+            String json = JSONUtil.toJsonStr(result);
             httpResponse.getWriter().print(json);
         } catch (IOException e1) {
         }
