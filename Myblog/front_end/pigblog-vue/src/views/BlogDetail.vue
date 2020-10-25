@@ -82,7 +82,7 @@
                 const blogId = this.$route.params.blogId
                 const _this = this
 
-                this.$alert('删除成功', '警告', {
+                this.$alert('删除成功', '提示', {
                     confirmButtonText: '确定',
                     callback: action => {
                         this.$axios.get("blog/delete/" + blogId)

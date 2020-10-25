@@ -56,7 +56,6 @@ public class BlogController {
             temp = blogService.getById(blog.getId());
             //只能编辑自己的文章
             Assert.isTrue(temp.getUserId().longValue() == ShiroUtils.getProfile().getId().longValue(), "没有编辑权限");
-
         } else {
             temp = new Blog();
             temp.setUserId(ShiroUtils.getProfile().getId());
