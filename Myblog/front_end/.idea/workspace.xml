@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1313db03-5e52-4c4e-8712-87325cdb8f42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pigblog-vue/src/components/mavonEditor.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pigblog-vue/src/views/BlogDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pigblog-vue/src/views/BlogDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rear_end/src/main/java/com/cxy/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rear_end/src/main/java/com/cxy/controller/BlogController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rear_end" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -111,6 +109,7 @@
       <workItem from="1603419654708" duration="185000" />
       <workItem from="1603422133263" duration="8401000" />
       <workItem from="1603602654511" duration="1539000" />
+      <workItem from="1603767206641" duration="983000" />
     </task>
     <servers />
   </component>
