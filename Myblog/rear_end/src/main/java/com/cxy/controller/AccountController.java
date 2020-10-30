@@ -3,14 +3,17 @@ package com.cxy.controller;
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.crypto.SecureUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.cxy.common.dto.Amenddto;
 import com.cxy.common.dto.Logindto;
 import com.cxy.common.dto.Registdto;
 import com.cxy.common.lang.Result;
 import com.cxy.entity.User;
 import com.cxy.service.UserService;
 import com.cxy.utils.JwtUtils;
+import org.apache.naming.factory.ResourceLinkFactory;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 import org.springframework.validation.annotation.Validated;
@@ -105,6 +108,22 @@ public class AccountController {
         return byId;
     }
 
+//    @PostMapping("/amend")
+//    public Result Amend(@Validated @RequestBody Amenddto amenddto, HttpServletResponse response) {
+//        User user = userService.getOne(new QueryWrapper<User>().eq("username", amenddto.getUsername()));
+//        if (user != null) {
+//            boolean username = userService.update(user, new QueryWrapper<User>().eq("username", amenddto.getUsername()));
+//            user.setUsername(amenddto.getNewUsername());
+//            user.setEmail(amenddto.getEmail());
+//            return Result.success(MapUtil.builder()
+//                    .put("id", user.getId())
+//                    .put("username", user.getUsername())
+//                    .put("avatar", user.getAvatar())
+//                    .put("email", user.getEmail())
+//                    .map());
+//        }
+//        return Result.fail("修改失败");
+//    }
 
     // 退出
     @GetMapping("/logout")

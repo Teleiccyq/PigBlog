@@ -3,7 +3,7 @@
     <div class="m-content">
         <h3>Pig的Blog</h3>
         <div class="block">
-            <el-link href="/">
+            <el-link @click="loginOrChange">
                 <el-avatar :size="50" :src="user.avatar"></el-avatar>
             </el-link>
             <div>{{user.username}}</div>
@@ -47,7 +47,15 @@
                     _this.$store.commit("REMOVE_INFO")
                     _this.$router.push("/login")
                 });
-            }
+            },
+            loginOrChange(){
+                const _this = this
+                if (this.user.username == '请先登录'){
+                    _this.$router.push("/login")
+                }else{
+                    _this.$router.push("/userdetail")
+                }
+            },
         },
         created(){
             if (this.$store.getters.getUser.username){

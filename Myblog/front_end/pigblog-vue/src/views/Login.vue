@@ -12,9 +12,7 @@
                     <el-form-item label="密码" prop="password">
                         <el-input type="password" v-model="ruleForm.password"></el-input>
                     </el-form-item>
-
                     <el-form-item>
-
                         <Vcode
                                 :show="isShow"
                                 @success="success"
@@ -84,8 +82,6 @@
 
                             //获取
                             console.log("获取"+_this.$store.getters.getUser)
-
-
                         })
                     } else {
                         console.log('error submit!!');

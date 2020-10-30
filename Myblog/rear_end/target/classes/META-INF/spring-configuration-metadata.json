@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "cxy.jwt",
+      "type": "com.cxy.utils.JwtUtils",
+      "sourceType": "com.cxy.utils.JwtUtils"
+    }
+  ],
+  "properties": [
+    {
+      "name": "cxy.jwt.expire",
+      "type": "java.lang.Long",
+      "sourceType": "com.cxy.utils.JwtUtils",
+      "defaultValue": 0
+    },
+    {
+      "name": "cxy.jwt.header",
+      "type": "java.lang.String",
+      "sourceType": "com.cxy.utils.JwtUtils"
+    },
+    {
+      "name": "cxy.jwt.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.cxy.utils.JwtUtils"
+    }
+  ],
+  "hints": []
+}

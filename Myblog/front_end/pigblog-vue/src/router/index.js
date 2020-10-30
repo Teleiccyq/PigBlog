@@ -6,6 +6,7 @@ import Blogs from '../views/Blogs.vue'
 import BlogEdit from '../views/BlogEdit.vue'
 import BlogDetail from '../views/BlogDetail.vue'
 import HomePage from "../views/HomePage";
+import UserDetail from "../views/UserDetail";
 Vue.use(VueRouter)
 
 const routes = [
@@ -56,6 +57,12 @@ const routes = [
             requirAuth:true,
             index:6
         }
+    },
+    {
+        path: '/userdetail',
+        name: 'UserDetail',
+        meta:{index:5},
+        component: resolve => require(['@/views/UserDetail'],resolve)
     },
 
 

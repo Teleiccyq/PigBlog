@@ -92,6 +92,14 @@ public class ShiroConfig {
 
         Map<String, Filter> filters = new HashMap<>();
         filters.put("jwt", jwtFilter);
+
+        HashMap<String, String> map = new HashMap<>();
+        map.put("/blog/edit","restrict[1]");
+
+        //authc：必循认证了才能访问
+        map.put("/blog/edit","authc");
+
+
         shiroFilter.setFilters(filters);
 
         Map<String, String> filterMap = shiroFilterChainDefinition.getFilterChainMap();

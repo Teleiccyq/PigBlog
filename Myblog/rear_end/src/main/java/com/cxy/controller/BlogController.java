@@ -68,7 +68,7 @@ public class BlogController {
         return Result.success(null);
     }
 
-//    @RequiresAuthentication
+    @RequiresAuthentication
     @GetMapping("blog/delete/{id}")
     public Result delete(@PathVariable(name = "id") Long id){
         boolean removeID = blogService.removeById(id);

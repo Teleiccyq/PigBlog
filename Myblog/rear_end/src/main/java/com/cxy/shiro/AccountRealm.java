@@ -5,10 +5,13 @@ import com.cxy.entity.User;
 import com.cxy.service.UserService;
 import com.cxy.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -32,10 +35,17 @@ public class AccountRealm extends AuthorizingRealm {
     }
 
 
-    //获取权限，封装成info返回给shiro
+    //获取权限，封装成info返回给shiro  授权
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        return null;
+        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+        info.addStringPermission("1");
+        Subject subject = SecurityUtils.getSubject();
+        User principal = (User) subject.getPrincipal();
+
+//        info.addStringPermission(principal.getRestrict());
+
+        return info;
     }
 
 

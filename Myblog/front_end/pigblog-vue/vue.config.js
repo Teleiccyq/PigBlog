@@ -8,9 +8,9 @@ module.exports = {
 
         host: '0.0.0.0',
 
-        port: 8083,
+        port: 8081,
 
-        public: '172.25.173.198:8083',
+        public: '172.25.173.198:8081',
 
         hot: true,
 
