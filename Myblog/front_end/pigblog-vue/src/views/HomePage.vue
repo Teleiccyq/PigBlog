@@ -2,7 +2,8 @@
     <div class="backPic">
         <span><el-link class="mblog" type="danger" @click="mblogs">Blog</el-link></span>
         <div class="mTime">
-            <p>{{gettime}}</p>
+<!--            <p>{{gettime}}</p>-->
+                <p>{{motto}}</p>
         </div>
     </div>
 </template>
@@ -32,10 +33,19 @@
         data() {
             return {
                 gettime: '',//当前时间
+                motto:'',//展示的一条格言语句
+                mottos:[//格言数组
+                    '前天看到了小兔，昨天是小鹿，今天是你。',
+                    'Fear can hold you prisoner.Hope can set you free',
+                    '海纳百川，有容乃大;壁立千仞，无欲则刚',
+                    '那些刻在椅子背后的爱情，会不会像水泥上的花朵，开出没有风的，寂寞的森林',
+                    '当我们爱别人的时候，生活是美好、快乐的',
+                ],
             }
         },
         created() {
             this.currentTime();
+            this.motto = this.mottos[Math.floor((Math.random() * this.mottos.length))]
         },
     }
 </script>
@@ -44,16 +54,15 @@
 <style scoped>
     .mTime {
         text-align: center;
-        width: 220px;
+        width: 500px;
         height: 60px;
         border-radius: 50px;
-        /*background-color: #fbc4c4;*/
-        margin-left: 120px;
+        margin-left: 10px;
         margin-top: 140px;
     }
 
     .mTime p {
-        font-size: 50px;
+        font-size: 20px;
         color: #e838ff;
         font-style: italic;
         font-weight: bold;

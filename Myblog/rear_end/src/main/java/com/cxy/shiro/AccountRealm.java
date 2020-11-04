@@ -38,14 +38,15 @@ public class AccountRealm extends AuthorizingRealm {
     //获取权限，封装成info返回给shiro  授权
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-        info.addStringPermission("1");
-        Subject subject = SecurityUtils.getSubject();
-        User principal = (User) subject.getPrincipal();
-
+//        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+//        info.addStringPermission("1");
+//        Subject subject = SecurityUtils.getSubject();
+//        User principal = (User) subject.getPrincipal();
+//
 //        info.addStringPermission(principal.getRestrict());
-
-        return info;
+//
+//        return info;
+        return null;
     }
 
 

@@ -61,7 +61,7 @@ const routes = [
     {
         path: '/userdetail',
         name: 'UserDetail',
-        meta:{index:5},
+        meta:{index:7},
         component: resolve => require(['@/views/UserDetail'],resolve)
     },
 

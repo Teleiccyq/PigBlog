@@ -23,6 +23,7 @@
     "portfinder": "^1.0.21",
     "postcss-px-to-viewport": "^1.1.1",
     "qs": "^6.9.4",
+    "showdown-highlight": "^2.1.5",
     "vis-network": "^8.3.2",
     "vue": "^2.6.11",
     "vue-aplayer": "^1.6.1",

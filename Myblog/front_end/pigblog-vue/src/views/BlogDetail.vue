@@ -22,7 +22,8 @@
                 </el-link>
             </div>
             <el-divider></el-divider>
-            <div class="markdown-body" v-html="blog.content"></div>
+            <div class="markdown-body" v-html="blog.content">
+            </div>
         </div>
     </div>
 </template>
@@ -123,5 +124,29 @@
         line-height: 30px;
     }
 
+    /* markdown 高亮 */
 
+    .hljs-name{
+
+        color: #22863a;
+
+    }
+
+    .hljs-attr{
+
+        color: #6f42c1;
+
+    }
+
+    .hljs-keyword{
+
+        color: red;
+
+    }
+
+    .hljs-string{
+
+        color: #032f62;
+
+    }
 </style>

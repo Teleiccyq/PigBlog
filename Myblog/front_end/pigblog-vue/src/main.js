@@ -10,6 +10,7 @@ import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 import './axios.js' // 请求拦截
 import "./permission"
+import "github-markdown-css"
 
 
 
