@@ -1,6 +1,6 @@
 module.exports = {
 
-
+    publicPath: '/',
     // devServer Options don't belong into `configureWebpack`
 
     devServer: {
@@ -8,9 +8,9 @@ module.exports = {
 
         host: '0.0.0.0',
 
-        port: 8081,
+        port: 8281,
 
-        public: '172.25.173.198:8081',
+        // public: '172.25.173.198:8281',
 
         hot: true,
 

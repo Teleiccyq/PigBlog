@@ -28,4 +28,4 @@ cxy:
     expire: 604800
     header: Authorization
 server:
-  port: 8080
+  port: 8280

@@ -56,7 +56,6 @@
         text-align: center;
         width: 500px;
         height: 60px;
-        border-radius: 50px;
         margin-left: 10px;
         margin-top: 140px;
     }
