@@ -48,7 +48,7 @@
         methods: {
             page(currentPage) {
                 const _this = this
-                this.$axios.get('http://localhost:8080/blogs?currentPage=' + currentPage).then((res) => {
+                this.$axios.get('/blogs?currentPage=' + currentPage).then((res) => {
                     console.log(res.data.data.records)
                     _this.blogs = res.data.data.records
                     _this.currentPage = res.data.data.current

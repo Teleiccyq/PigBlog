@@ -5,11 +5,56 @@
 
 > 前端：Vue，element-ui，axios，基于Vue的markdown编辑器mavon-editor 
 
-![image-20201014203052029](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201014203052029.png)
+卷 数据 的文件夹 PATH 列表
+卷序列号为 65F3-3762
+D:.
+├─.idea
+│  └─dictionaries
+├─dist
+│  ├─css
+│  ├─fonts
+│  ├─img
+│  └─js
+├─node_modules
+├─public
+└─src
+    ├─assets
+    ├─components
+    ├─router
+    ├─store
+    └─views
 
 > **后端：Spring Boot，使用Mybatis puls整合，整合shiro+jwt，并会话共享**
 
-## ![image-20201014203027272](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201014203027272.png)
+.idea
+
+.mvn
+src
+│  ├─main
+│  │  ├─java
+│  │  │  └─com
+│  │  │      └─cxy
+│  │  │          ├─common
+│  │  │          │  ├─dto
+│  │  │          │  ├─exception
+│  │  │          │  └─lang
+│  │  │          ├─config
+│  │  │          ├─controller
+│  │  │          ├─entity
+│  │  │          ├─mapper
+│  │  │          ├─service
+│  │  │          │  └─impl
+│  │  │          ├─shiro
+│  │  │          └─utils
+│  │  └─resources
+│  │      ├─mapper
+│  │      ├─META-INF
+│  │      ├─static
+│  │      └─templates
+│  └─test
+│      └─java
+│          └─com
+│              └─cxy
 
 ## 跨域问题：
 

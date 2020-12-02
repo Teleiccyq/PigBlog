@@ -10,7 +10,7 @@ module.exports = {
 
         port: 8281,
 
-        // public: '172.25.173.198:8281',
+        public: '172.25.173.198:8281',
 
         hot: true,
 
